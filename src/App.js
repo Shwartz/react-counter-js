@@ -28,7 +28,9 @@ class App extends Component {
                                     <ListItem
                                         button={true}
                                         selected={this.state.selectedIndex === 1}
-                                        onClick={(ev) => this.handleListItemClick(ev, 1)}
+                                        onClick={(ev) => {
+                                            this.handleListItemClick(ev, 1)
+                                        }}
                                     >
                                         Home
                                     </ListItem>
@@ -37,7 +39,9 @@ class App extends Component {
                                     <ListItem
                                         button={true}
                                         selected={this.state.selectedIndex === 2}
-                                        onClick={(ev) => this.handleListItemClick(ev, 2)}
+                                        onClick={(ev) => {
+                                            this.handleListItemClick(ev, 2)
+                                        }}
                                     >
                                         Lesson 1 - Simple counter
                                     </ListItem>
