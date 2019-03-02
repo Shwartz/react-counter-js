@@ -1,7 +1,7 @@
 {
     "extends": [
-        "tslint:latest",
-        "tslint-react"
+        "jslint:latest",
+        "jslint-react"
     ],
     "rules": {
         "jsx-wrap-multiline": true,
