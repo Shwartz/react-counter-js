@@ -14,6 +14,7 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
+        "prettier": "prettier --write 'src/**/*.{js,scss}'",
         "lint": "jslint -c jslint.json 'src/**/*.{js}' -e 'src/**/*.d.ts'",
         "lint-fix": "jslint --fix -c jslint.json 'src/**/*.{js}' -e 'src/**/*.d.ts'",
         "test": "react-scripts test",
@@ -30,11 +31,5 @@
     ],
     "devDependencies": {
         "prettier": "1.16.4"
-    },
-    "prettier": {
-        "trailingComma": "es5",
-        "tabWidth": 4,
-        "semi": false,
-        "singleQuote": true
     }
 }

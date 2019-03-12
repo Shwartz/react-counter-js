@@ -1,8 +1,8 @@
-import {Button, Input} from '@material-ui/core';
-import React, {Fragment} from 'react';
-import styles from './InputWidget.module.scss';
+import { Button, Input } from "@material-ui/core";
+import React, { Fragment } from "react";
+import styles from "./InputWidget.module.scss";
 
-export const InputWidget = ({change, add, remove, inputValue}) => {
+export const InputWidget = ({ change, add, remove, inputValue }) => {
     return (
         <Fragment>
             <div className={styles.buttons}>
@@ -10,23 +10,27 @@ export const InputWidget = ({change, add, remove, inputValue}) => {
                     variant="contained"
                     onClick={() => {
                         remove();
-                    }}>Remove {inputValue}
+                    }}
+                >
+                    Remove {inputValue}
                 </Button>
                 <Button
                     variant="contained"
                     onClick={() => {
                         add();
-                    }}>Add {inputValue}
+                    }}
+                >
+                    Add {inputValue}
                 </Button>
                 <Input
                     type="number"
                     value={inputValue}
-                    onChange={({currentTarget}) => {
+                    onChange={({ currentTarget }) => {
                         change(+currentTarget.value);
                     }}
                     className={styles.inputValue}
                 />
             </div>
         </Fragment>
-    )
+    );
 };

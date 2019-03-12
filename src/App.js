@@ -1,9 +1,9 @@
-import {CssBaseline, Grid, List, ListItem} from '@material-ui/core';
-import {HashRouter as Router, Link, Route, Switch} from 'react-router-dom';
-import styles from './App.module.scss';
-import React, {Component} from 'react';
-import Home from './pages/Home';
-import Lesson1 from './pages/lesson1/Lesson1';
+import { CssBaseline, Grid, List, ListItem } from "@material-ui/core";
+import { HashRouter as Router, Link, Route, Switch } from "react-router-dom";
+import styles from "./App.module.scss";
+import React, { Component } from "react";
+import Home from "./pages/Home";
+import Lesson1 from "./pages/lesson1/Lesson1";
 
 class App extends Component {
     state = {
@@ -20,16 +20,18 @@ class App extends Component {
         return (
             <Router basename={process.env.PUBLIC_URL}>
                 <div className={styles.App}>
-                    <CssBaseline/>
+                    <CssBaseline />
                     <Grid container={true} spacing={16}>
                         <Grid item={true} sm={4} xs={12}>
                             <List component="nav">
                                 <Link to="/">
                                     <ListItem
                                         button={true}
-                                        selected={this.state.selectedIndex === 1}
-                                        onClick={(ev) => {
-                                            this.handleListItemClick(ev, 1)
+                                        selected={
+                                            this.state.selectedIndex === 1
+                                        }
+                                        onClick={ev => {
+                                            this.handleListItemClick(ev, 1);
                                         }}
                                     >
                                         Home
@@ -38,9 +40,11 @@ class App extends Component {
                                 <Link to="/lesson-1">
                                     <ListItem
                                         button={true}
-                                        selected={this.state.selectedIndex === 2}
-                                        onClick={(ev) => {
-                                            this.handleListItemClick(ev, 2)
+                                        selected={
+                                            this.state.selectedIndex === 2
+                                        }
+                                        onClick={ev => {
+                                            this.handleListItemClick(ev, 2);
                                         }}
                                     >
                                         Lesson 1 - Simple counter
@@ -51,8 +55,15 @@ class App extends Component {
                         <Grid item={true} sm={8} xs={12}>
                             <section>
                                 <Switch>
-                                    <Route exact={true} path="/" component={Home}/>
-                                    <Route path="/lesson-1" component={Lesson1}/>
+                                    <Route
+                                        exact={true}
+                                        path="/"
+                                        component={Home}
+                                    />
+                                    <Route
+                                        path="/lesson-1"
+                                        component={Lesson1}
+                                    />
                                 </Switch>
                             </section>
                         </Grid>

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {InputWidget} from './widget/InputWidget';
+import React, { Component } from "react";
+import { InputWidget } from "./widget/InputWidget";
 
 export class Lesson1 extends Component {
     constructor(props) {
@@ -12,9 +12,9 @@ export class Lesson1 extends Component {
     };
 
     add() {
-        this.setState((currentState) => {
-            const {inputValue, totalValue} = currentState;
-            const result                   = inputValue + totalValue;
+        this.setState(currentState => {
+            const { inputValue, totalValue } = currentState;
+            const result = inputValue + totalValue;
             return {
                 inputValue,
                 totalValue: result
@@ -23,9 +23,9 @@ export class Lesson1 extends Component {
     }
 
     remove() {
-        this.setState((currentState) => {
-            const {inputValue, totalValue} = currentState;
-            const result                   = totalValue - inputValue;
+        this.setState(currentState => {
+            const { inputValue, totalValue } = currentState;
+            const result = totalValue - inputValue;
             return {
                 inputValue,
                 totalValue: result
@@ -35,12 +35,12 @@ export class Lesson1 extends Component {
 
     totalValue(value) {
         this.setState({
-                          inputValue: value
-                      });
+            inputValue: value
+        });
     }
 
     render() {
-        const {inputValue, totalValue} = this.state;
+        const { inputValue, totalValue } = this.state;
 
         return (
             <div>
@@ -59,7 +59,7 @@ export class Lesson1 extends Component {
                     />
                 </div>
             </div>
-        )
+        );
     }
 }
 
