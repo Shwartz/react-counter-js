@@ -58,6 +58,9 @@ export class Lesson1 extends Component {
                             this.remove();
                         }}
                         inputValue={inputValue}
+                        change={(val) => {
+                            this.totalValue((val))
+                        }}
                     />
                 </div>
             </div>
