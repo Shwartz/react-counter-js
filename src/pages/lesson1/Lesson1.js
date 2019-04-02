@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { InputWidget } from "./widget/InputWidget";
 
+import css from './Lesson1.module.scss';
+
 export class Lesson1 extends Component {
     constructor(props) {
         super(props);
@@ -43,10 +45,10 @@ export class Lesson1 extends Component {
         const { inputValue, totalValue } = this.state;
 
         return (
-            <div>
+            <div className={css.lesson1}>
                 <h1>Lesson1 page</h1>
-                <div>
-                    <p>Total: {totalValue}</p>
+                <div className={css.codeDemo}>
+                    <p className={css.output}>Total: {totalValue}</p>
 
                     <InputWidget
                         add={() => {

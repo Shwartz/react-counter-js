@@ -22,15 +22,15 @@ export const InputWidget = ({ change, add, remove, inputValue }) => {
                 >
                     Add {inputValue}
                 </Button>
-                <Input
-                    type="number"
-                    value={inputValue}
-                    onChange={({ currentTarget }) => {
-                        change(+currentTarget.value);
-                    }}
-                    className={styles.inputValue}
-                />
             </div>
+            <Input
+                type="number"
+                value={inputValue}
+                onChange={({ currentTarget }) => {
+                    change(+currentTarget.value);
+                }}
+                className={styles.inputValue}
+            />
         </Fragment>
     );
 };
