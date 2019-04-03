@@ -4,6 +4,7 @@ import styles from "./App.module.scss";
 import React, { Component } from "react";
 import Home from "./pages/Home";
 import Lesson1 from "./pages/lesson1/Lesson1";
+import Lesson2 from "./pages/lesson2/Lesson2";
 
 class App extends Component {
     state = {
@@ -50,6 +51,19 @@ class App extends Component {
                                         Lesson 1 - Simple counter
                                     </ListItem>
                                 </Link>
+                                <Link to="/lesson-2">
+                                    <ListItem
+                                        button={true}
+                                        selected={
+                                            this.state.selectedIndex === 3
+                                        }
+                                        onClick={ev => {
+                                            this.handleListItemClick(ev, 3);
+                                        }}
+                                    >
+                                        Lesson 2 - Simple counter
+                                    </ListItem>
+                                </Link>
                             </List>
                         </Grid>
                         <Grid item={true} sm={8} xs={12}>
@@ -63,6 +77,10 @@ class App extends Component {
                                     <Route
                                         path="/lesson-1"
                                         component={Lesson1}
+                                    />
+                                    <Route
+                                        path="/lesson-2"
+                                        component={Lesson2}
                                     />
                                 </Switch>
                             </section>
